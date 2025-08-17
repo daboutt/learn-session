@@ -13,6 +13,11 @@ app.use(
     resave: false,
     saveUninitialized: false,
     store,
+    cookie: {
+      maxAge: 1000 * 60 * 60,
+      secure: true,
+      sameSite: 'strict',
+    },
   })
 );
 
